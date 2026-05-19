@@ -1,0 +1,36 @@
+«Типы наследования»:
+
+1. Три типа наследования
+Тип	public	protected	private
+public	public → public	protected → protected	private → недоступен
+protected	public → protected	protected → protected	private → недоступен
+private	public → private	protected → private	private → недоступен
+2. Что меняется
+public – сохраняется исходная видимость (есть отношение is-a).
+
+protected – всё становится protected снаружи, внутри наследника – как было.
+
+private – всё становится private (только реализация, без is-a).
+
+3. Доступ снаружи и в наследнике
+Тип	Доступ снаружи	Доступ в наследнике	Связь
+public	✅ да	✅ да	is-a
+protected	❌ нет	✅ да (внутренняя)	–
+private	❌ нет	❌ нет (через методы)	реализация
+4. Практическое задание
+Умный дом:
+
+Device (базовый: turnOn(), turnOff())
+
+Light – public наследование
+
+Thermostat – private наследование
+
+Переопределить методы, проверить доступ.
+
+5. Вывод
+Наследование влияет на архитектуру и инкапсуляцию.
+
+public – для is-a.
+
+private/protected – для скрытой реализации.
